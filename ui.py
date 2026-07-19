@@ -564,22 +564,55 @@ def create_team():
         )
 
         ui.label(
-            "Created as a school project."
+            "Meet the team behind Driving Towards Tomorrow"
         ).classes(
             "section-subtitle"
         )
 
-        with ui.card().classes(
-            "glass-card"
-        ):
+        members = [
+            (
+                "DB",
+                "Dwij Bharadwaj",
+                "Roll No. 14",
+                "Website • PPT • Project File",
+            ),
+            (
+                "LN",
+                "Lavith Nagpal",
+                "Roll No. 22",
+                "Project File • Question Box",
+            ),
+            (
+                "RA",
+                "Rudraksh Aashri",
+                "Roll No. 28",
+                "Prototype Model • Survey",
+            ),
+            (
+                "DB",
+                "Daksh Bharadwaj",
+                "Roll No. 11",
+                "Log Book",
+            ),
+        ]
 
-            ui.label(
-                "Driving Towards Tomorrow\nSolar Powered Cars"
-            ).classes(
-                "section-text"
-            )
+        with ui.row().classes("team-grid"):
 
+            for initials, name, roll, work in members:
 
+                with ui.card().classes("team-card"):
+
+                    ui.label(initials).classes("team-avatar")
+
+                    ui.label(name).classes("team-name")
+
+                    ui.label(roll).classes("team-roll")
+
+                    ui.separator()
+
+                    ui.label("Contribution").classes("team-heading")
+
+                    ui.label(work).classes("team-work")
 # ==========================================================
 # FOOTER
 # ==========================================================
