@@ -409,7 +409,7 @@ def create_prototype():
         ):
 
             ui.image(
-                "/static/images/solar_car.svg"
+                "/static/images/prototype.jpg"
             ).classes(
                 "prototype-image"
             )
@@ -564,55 +564,22 @@ def create_team():
         )
 
         ui.label(
-            "Meet the team behind Driving Towards Tomorrow"
+            "Created as a school project."
         ).classes(
             "section-subtitle"
         )
 
-        members = [
-            (
-                "DB",
-                "Dwij Bharadwaj",
-                "Roll No. 14",
-                "Website • PPT • Project File",
-            ),
-            (
-                "LN",
-                "Lavith Nagpal",
-                "Roll No. 22",
-                "Project File • Question Box",
-            ),
-            (
-                "RA",
-                "Rudraksh Aashri",
-                "Roll No. 28",
-                "Prototype Model • Survey",
-            ),
-            (
-                "DB",
-                "Daksh Bharadwaj",
-                "Roll No. 11",
-                "Log Book",
-            ),
-        ]
+        with ui.card().classes(
+            "glass-card"
+        ):
 
-        with ui.row().classes("team-grid"):
+            ui.label(
+                "Driving Towards Tomorrow\nSolar Powered Cars"
+            ).classes(
+                "section-text"
+            )
 
-            for initials, name, roll, work in members:
 
-                with ui.card().classes("team-card"):
-
-                    ui.label(initials).classes("team-avatar")
-
-                    ui.label(name).classes("team-name")
-
-                    ui.label(roll).classes("team-roll")
-
-                    ui.separator()
-
-                    ui.label("Contribution").classes("team-heading")
-
-                    ui.label(work).classes("team-work")
 # ==========================================================
 # FOOTER
 # ==========================================================
