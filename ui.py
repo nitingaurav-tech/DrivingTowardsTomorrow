@@ -557,28 +557,83 @@ def create_team():
 
         ui.html('<div id="team"></div>')
 
-        ui.label(
-            "Project Team"
-        ).classes(
-            "section-title"
-        )
+        ui.label("Project Team").classes("section-title")
 
         ui.label(
-            "Created as a school project."
-        ).classes(
-            "section-subtitle"
-        )
+            "Meet the team behind Driving Towards Tomorrow"
+        ).classes("section-subtitle")
 
-        with ui.card().classes(
-            "glass-card"
+        members = [
+            (
+                "DB",
+                "Dwij Bharadwaj",
+                "Roll No. 14",
+                "Website • PPT • Project File",
+            ),
+            (
+                "LN",
+                "Lavith Nagpal",
+                "Roll No. 22",
+                "Project File • Question Box",
+            ),
+            (
+                "RA",
+                "Rudraksh Aashri",
+                "Roll No. 28",
+                "Prototype Model • Survey",
+            ),
+            (
+                "DB",
+                "Daksh Bharadwaj",
+                "Roll No. 11",
+                "Log Book",
+            ),
+        ]
+
+        with ui.row().style(
+            "width:100%; justify-content:center; gap:28px; "
+            "flex-wrap:wrap; margin-top:40px;"
         ):
 
-            ui.label(
-                "Driving Towards Tomorrow\nSolar Powered Cars"
-            ).classes(
-                "section-text"
-            )
+            for initials, name, roll, work in members:
 
+                with ui.card().style(
+                    "width:290px; min-height:360px; padding:28px; "
+                    "border-radius:20px; text-align:center; "
+                    "background:#ffffff; color:#081426;"
+                ):
+
+                    ui.label(initials).style(
+                        "width:110px; height:110px; border-radius:50%; "
+                        "background:#ffd34d; color:#081426; "
+                        "display:flex; align-items:center; "
+                        "justify-content:center; margin:0 auto 20px auto; "
+                        "font-size:32px; font-weight:800;"
+                    )
+
+                    ui.label(name).style(
+                        "color:#081426; font-size:22px; "
+                        "font-weight:700; margin-bottom:8px;"
+                    )
+
+                    ui.label(roll).style(
+                        "color:#465368; font-size:16px; "
+                        "margin-bottom:12px;"
+                    )
+
+                    ui.separator().style(
+                        "background:#d8dee8; width:100%; margin:14px 0;"
+                    )
+
+                    ui.label("Contribution").style(
+                        "color:#081426; font-size:17px; "
+                        "font-weight:700; margin-top:8px;"
+                    )
+
+                    ui.label(work).style(
+                        "color:#465368; font-size:15px; "
+                        "line-height:1.5; text-align:center;"
+                    )
 
 # ==========================================================
 # FOOTER
