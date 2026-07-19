@@ -409,7 +409,7 @@ def create_prototype():
         ):
 
             ui.image(
-                "/static/images/prototype.jpg"
+                "/static/images/solar_car.svg"
             ).classes(
                 "prototype-image"
             )
